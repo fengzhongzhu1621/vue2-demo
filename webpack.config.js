@@ -48,11 +48,13 @@ module.exports = {
             {
                 test: /\.css/,
                 exclude: /^node_modules$/,
+                // 用来连接不同的loader， 而且执行顺序是从右到左
                 loader: `style-loader!css-loader!autoprefixer-loader?{ browsers: ['last 100 versions'] }!`
             },
             {
                 test: /\.less/,
                 exclude: /^node_modules$/,
+                // 用来连接不同的loader， 而且执行顺序是从右到左
                 loader: `style-loader!css-loader!autoprefixer-loader?{ browsers: ['last 100 versions'] }!less-loader`
             },
             {
@@ -63,6 +65,7 @@ module.exports = {
             {
                 test: /\.(eot|woff|svg|ttf|woff2|gif|appcache)(\?|$)/,
                 exclude: /^node_modules$/,
+                // 将字体文件打包
                 loader: 'file-loader?name=[name].[ext]'
             }
         ]
