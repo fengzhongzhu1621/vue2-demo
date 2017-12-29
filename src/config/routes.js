@@ -9,7 +9,7 @@ export default [
         children: [
             {
                 path: '/login', //登录
-                meta: { auth: false },
+                meta: { auth: false },  // false表示不跳转到登录页面
                 // 路由懒加载
                 component: resolve => require(['../pages/login/'], resolve)
             },
@@ -25,7 +25,7 @@ export default [
             },
             {
                 path: '/', //首页
-                meta: { auth: false },
+                meta: { auth: false },  // false表示不跳转到登录页面
                 // 路由懒加载
                 component: resolve => require(['../pages/index/'], resolve)
             },

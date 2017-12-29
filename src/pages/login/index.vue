@@ -50,11 +50,14 @@
 			}
 		},
 		methods: {
+            // 将组件的 methods 映射为 store.dispatch 调用
             ...mapActions([USER_SIGNIN]),
 			submit() {
 				this.btn = true
 				if(!this.form.id || !this.form.name) return
+				// 分发 Action，即执行登录操作并将用户信息保存在sessionStorage中
 				this.USER_SIGNIN(this.form)
+				// 不会向 history 添加新记录, 替换掉当前的 history 记录。
 				this.$router.replace({ path: '/home' })
 			}
 		}
