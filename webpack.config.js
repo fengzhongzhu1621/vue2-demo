@@ -65,7 +65,7 @@ module.exports = {
             {
                 test: /\.(eot|woff|svg|ttf|woff2|gif|appcache)(\?|$)/,
                 exclude: /^node_modules$/,
-                // 将字体文件打包
+                // 字体文件不hash
                 loader: 'file-loader?name=[name].[ext]'
             }
         ]

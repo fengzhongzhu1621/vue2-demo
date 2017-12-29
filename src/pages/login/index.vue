@@ -35,6 +35,7 @@
 	</div>
 </template>
 <script>
+	// 在组件中分发 Action
     import { mapActions } from 'vuex'
     import { USER_SIGNIN } from 'store/user'
 
